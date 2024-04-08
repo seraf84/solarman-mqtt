@@ -66,7 +66,7 @@ class SolarmanApi:
         """
         conn = http.client.HTTPSConnection(self.url, timeout=60)
         payload = json.dumps({"stationId": self.station_id})
-        logging.debug("Using station_id "+self.station_id)
+        logging.debug("Using station_id "+str(self.station_id))
         headers = {
             "Content-Type": "application/json",
             "Authorization": "bearer " + self.token,
